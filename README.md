@@ -6,6 +6,8 @@ by means of the algorithm specified in
 As an example, see the formation of a transverse dune (represented as a heightfield) at
 http://htmlpreview.github.io/?https://github.com/kilimanjaro/dunes/blob/master/transverse_dune.html
 
+*****************
+
 The code is split between two files. The simulation code is in werner.cpp,
 and some helper code for generating animations is in werner.py
 
@@ -29,7 +31,7 @@ is the file name which the video is saved. As an example, see the video `square_
 
 *****************
 Slabfield format
-*****************
+
 The basic object being manipulated is a `slabfield', which which is simply a n x m array
 of slab heights, as specified in the Werner paper. A slabfield specification is a text file with
 the following format:
