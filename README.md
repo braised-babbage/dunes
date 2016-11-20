@@ -1,3 +1,4 @@
+#### Overview
 The following contains a small bit of code for simulating the evolution of wind-blown sand dunes,
 by means of the algorithm specified in
    Werner, B. T. ``Eolian dunes: computer simulations and attractor interpretation.''
@@ -8,31 +9,37 @@ http://htmlpreview.github.io/?https://github.com/kilimanjaro/dunes/blob/master/t
 
 *****************
 
+#### Code
+
+For what it's worth, this was just a quick thing I threw together while mentoring an undergraduate research project; in that sense it is mostly throwaway. Nonetheless, I have decided to upload it for the curious. 
+
 The code is split between two files. The simulation code is in werner.cpp,
 and some helper code for generating animations is in werner.py
 
-To build, type `make werner'.
+To build, type 
+	`make werner`
 
-To run, type `werner <n> <infile> <outfile>'. Here <n> denotes the number of iterations
+To run, type 
+	`werner <n> <infile> <outfile>`
+Here <n> denotes the number of iterations
 to simulate, <infile> is a slabfield specification, and <outfile> is where the resulting slabfield
 is stored.
 
 Example usage:
-	`werner 1000 square_500.txt square_500_2.txt'
+	`werner 1000 square_500.txt square_500_2.txt`
 results in 1000 iterations of the werner algorithm, beginning with the slabfield stored in square_500.txt,
 and saving the final result in square_500_2.txt
 
 Intermediate snapshots are saved in a temp directory, the path of which is displayed
 when the simulation terminates. These may be converted to a video by the method
-     `make_video(tmpdir,vname)'
+     `make_video(tmpdir,vname)`
 in werner.py, where tmpdir is a string with the path to the temp directory, and vname
-is the file name which the video is saved. As an example, see the video `square_500.html'.
-
+is the file name which the video is saved. 
 
 *****************
-Slabfield format
+#### Slabfield format
 
-The basic object being manipulated is a `slabfield', which which is simply a n x m array
+The basic object being manipulated is a 'slabfield', which which is simply a n x m array
 of slab heights, as specified in the Werner paper. A slabfield specification is a text file with
 the following format:
 
