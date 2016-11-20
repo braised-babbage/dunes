@@ -1,7 +1,10 @@
-The following contains software for simulating the evolution of wind-blown sand dunes,
+The following contains a small bit of code for simulating the evolution of wind-blown sand dunes,
 by means of the algorithm specified in
    Werner, B. T. ``Eolian dunes: computer simulations and attractor interpretation.''
    Geology 23, no. 12 (1995): 1107-1110.
+
+As an example, see the formation of a transverse dune (represented as a heightfield) at
+http://htmlpreview.github.io/?https://github.com/kilimanjaro/dunes/blob/master/transverse_dune.html
 
 The code is split between two files. The simulation code is in werner.cpp,
 and some helper code for generating animations is in werner.py
